@@ -1,4 +1,4 @@
-function lazyBG(element) {	
+export function lazyBG(element) {	
 	//store out Bgs
 	var lazyBackgrounds = [].slice.call(document.querySelectorAll(element));
 
@@ -31,4 +31,4 @@ function lazyBG(element) {
 	}
 }
 
-export { lazyBG };
+ 
