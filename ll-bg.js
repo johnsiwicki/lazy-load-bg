@@ -1,4 +1,4 @@
-export function lazyBG(element) {	
+function lazyBG(element) {	
 	//store out Bgs
 	var lazyBackgrounds = [].slice.call(document.querySelectorAll(element));
 
@@ -8,7 +8,7 @@ export function lazyBG(element) {
 		"intersectionRatio" in window.IntersectionObserverEntry.prototype
 	) {
 		//add a background of none
-		for (i = 0; i < lazyBackgrounds.length; i++) {
+		for (var i = 0; i < lazyBackgrounds.length; i++) {
 			lazyBackgrounds[i].style.background = "none";
 		}
 
@@ -29,6 +29,8 @@ export function lazyBG(element) {
 			lazyBackgroundObserver.observe(lazyBackground);
 		});
 	}
+  
+  console.log(element);
 }
 
- 
+export default lazyBG;
